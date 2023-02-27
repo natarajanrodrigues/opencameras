@@ -1,12 +1,19 @@
 #!/bin/zsh
 
+# exec killall node & 
 echo
 echo 'Running server...'
-node /Users/natarajan/BNB_projects/cameras/index.js &
+node ./index.js &
 echo 'Server on!'
 
 echo
-echo "Open firefox"
+echo "Open firefox\n"
 exec /Applications/Firefox.app/Contents/MacOS/./firefox -private-window "http://localhost:2000" &
 
-zsh
+# zsh
+
+read -p "Press enter to continue"
+
+exec killall node & 
+
+echo "\nFINISH"
